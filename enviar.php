@@ -1,7 +1,7 @@
 <?php
 $remitente = $_POST['email'];
 $destinatario = 'juanpablozabala21@gmail.com'; // en esta línea va el mail del destinatario.
-$asunto = $_POST['subject']; // acá se puede modificar el asunto del mail
+$asunto = "Portafolio Web"; // acá se puede modificar el asunto del mail
 if (!$_POST){
 ?>
 
@@ -9,6 +9,7 @@ if (!$_POST){
 }else{
 	 
     $cuerpo = "Nombre: " . $_POST["name"] . "\r\n"; 
+    $cuerpo = "Asunto: " .$_POST['subject']. "\r\n"; 
     $cuerpo .= "Email: " . $_POST["email"] . "\r\n";
 	$cuerpo .= "Mensaje: " . $_POST["message"] . "\r\n";
 	//las líneas de arriba definen el contenido del mail. Las palabras que están dentro de $_POST[""] deben coincidir con el "name" de cada campo. 
