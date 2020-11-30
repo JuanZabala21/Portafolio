@@ -24,6 +24,6 @@ if (!$_POST){
 
     mail($destinatario, $asunto, $cuerpo, $headers);
     
-    header("Location:index.html");
+    include 'index.html';
 }
 ?>
