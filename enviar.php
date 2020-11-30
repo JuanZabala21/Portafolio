@@ -1,43 +1,28 @@
 <?php
- 
-if($_POST) {
-    $visitor_name = "";
-    $visitor_email = "";
-    $email_title = "";
-    $concerned_department = "";
-    $visitor_message = "";
-     
-    if(isset($_POST['name'])) {
-      $visitor_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-    }
-     
-    if(isset($_POST['email'])) {
-        $visitor_email = str_replace(array("\r", "\n", "%0a", "%0d"), '', $_POST['email']);
-        $visitor_email = filter_var($visitor_email, FILTER_VALIDATE_EMAIL);
-    }
-     
-    if(isset($_POST['subject'])) {
-        $email_title = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
-    }
-          
-    if(isset($_POST['message'])) {
-        $visitor_message = htmlspecialchars($_POST['message']);
-    }
-     
-    $recipient = "juanpablozabala21@gmail.com";
+$remitente = $_POST['email'];
+$destinatario = 'juanpablozabala21@gmail.com'; // en esta línea va el mail del destinatario.
+$asunto = $_POST['subject']; // acá se puede modificar el asunto del mail
+if (!$_POST){
+?>
 
-    $headers  = 'MIME-Version: 1.0' . "\r\n"
-    .'Content-type: text/html; charset=utf-8' . "\r\n"
-    .'From: ' . $visitor_email . "\r\n";
-     
-    if(mail($recipient, $email_title, $visitor_message, $headers)) {
-        echo "<p>Thank you for contacting us, $visitor_name. You will get a reply within 24 hours.</p>";
-    } else {
-        echo '<p>We are sorry but the email did not go through.</p>';
-    }
-     
-} else {
-    echo '<p>Something went wrong</p>';
+<?php
+}else{
+	 
+    $cuerpo = "Nombre: " . $_POST["name"] . "\r\n"; 
+    $cuerpo .= "Email: " . $_POST["email"] . "\r\n";
+	$cuerpo .= "Mensaje: " . $_POST["message"] . "\r\n";
+	//las líneas de arriba definen el contenido del mail. Las palabras que están dentro de $_POST[""] deben coincidir con el "name" de cada campo. 
+	// Si se agrega un campo al formulario, hay que agregarlo acá.
+
+    $headers  = "MIME-Version: 1.0\n";
+    $headers .= "Content-type: text/plain; charset=utf-8\n";
+    $headers .= "X-Priority: 3\n";
+    $headers .= "X-MSMail-Priority: Normal\n";
+    $headers .= "X-Mailer: php\n";
+    $headers .= "De: \"".$_POST['name']."\" <".$remitente.">\n";
+
+    mail($destinatario, $asunto, $cuerpo, $headers);
+    
+    header("Location:index.html");
 }
- 
 ?>
