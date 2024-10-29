@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Juan P. Zabala Developer</title>
+  <title id="title">Juan P. Zabala Developer</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
   <!-- Favicons -->
   <link href="img/favicon3.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,10 +33,11 @@
 
 <body id="page-top">
 
+
   <!--/ Nav Star /-->
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top">Portafolio</a>
+      <a class="navbar-brand js-scroll" href="#page-top" id="portfolio">Portafolio</a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
         aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
@@ -46,41 +46,39 @@
       </button>
       <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
         <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link js-scroll" id="homeNav"  href="#home"></a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" id="aboutNav" href="#about"></a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" id="serviceNav" href="#service"></a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" id="workNav"  href="#work"></a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" id="contactNav" href="#contact"></a></li>
           <li class="nav-item">
-            <a class="nav-link js-scroll active" href="#home">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#about">Sobre mi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#service">Servicios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#work">Trabajos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#contact">Contáctame</a>
-          </li>
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Idioma
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" id="languageSwitcher">
+                <a class="dropdown-item" href="#" onclick="changeLanguage('es')">ESP</a>
+                <a class="dropdown-item" href="#" onclick="changeLanguage('en')">ENG</a>
+            </div>
+        </li>
         </ul>
       </div>
     </div>
   </nav>
+  
   <!--/ Nav End /-->
 
   <!--/ Intro Skew Star /-->
-  <div id="home" class="intro route bg-image" style="background-image: url(img/montains.jpg)">
+  <section id="home" class="intro route bg-image" style="background-image: url(img/montains.jpg)">
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
       <div class="table-cell">
         <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="intro-title mb-4">Juan Pablo Zabala</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">Software Engineer, FullStack Developer</span><strong class="text-slider"></strong></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+          <h1 class="intro-title mb-4" id="introTitle">Juan Pablo Zabala</h1>
+          <p class="intro-subtitle" id="introSubtitle"><span class="text-slider-items">Software Engineer, FullStack Developer, Frontend Engineer</span><strong class="text-slider"></strong></p>
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <!--/ Intro Skew End /-->
 
   <section id="about" class="about-mf sect-pt4 route">
@@ -98,18 +96,29 @@
                   </div>
                   <div class="col-sm-6 col-md-7">
                     <div class="about-info">
-                      <p><span class="title-s">Nombre: </span> <span>Juan Pablo Zabala</span></p>
-                      <p><span class="title-s">Perfil: </span> <span>Software Engineer</span></p>
+                      <p><span class="title-s" id="nameTitle"></span> <span>Juan Pablo Zabala</span></p>
+                      <p><span class="title-s" id="profile"></span> <span>Software Engineer</span></p>
                       <p><span class="title-s">Email: </span> <span>juanpablozabala21@gmail.com</span></p>
-                      <p><span class="title-s">CV: </span><a style="color: blue" href="docs/CV.pdf" target="_blank">Ver</a></p>
+                      <p><span class="title-s">CV: </span><a style="color: blue" href="#" target="_blank" id="see"></a>
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div class="skill-mf">
-                  <p class="title-s">Habilidades</p>
+                  <p class="title-s" id="skills">Habilidades</p>
                   <span>Angular</span> <span class="pull-right">85%</span>
                   <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>React</span> <span class="pull-right">70%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>VueJS</span> <span class="pull-right">80%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
                       aria-valuemax="100"></div>
                   </div>
                   <span>Spring Boot</span> <span class="pull-right">90%</span>
@@ -117,14 +126,9 @@
                     <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
                       aria-valuemax="100"></div>
                   </div>
-                  <span>TypeScript</span> <span class="pull-right">80%</span>
+                  <span>Golang - Gin Framework</span> <span class="pull-right">70%</span>
                   <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="65" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  <span>Base de Datos</span> <span class="pull-right">80%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
                       aria-valuemax="100"></div>
                   </div>
                   <span>Docker</span> <span class="pull-right">75%</span>
@@ -132,26 +136,26 @@
                     <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="70" aria-valuemin="0"
                       aria-valuemax="100"></div>
                   </div>
-                  <span>Golang - Gin Framework</span> <span class="pull-right">70%</span>
+                  <span id="database"></span> <span class="pull-right">80%</span>
                   <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
                       aria-valuemax="100"></div>
-                  </div>
+                    </div>
                 </div>
                 <div class="skill-mf">
-                  <p class="title-s">Estudios</p>
+                  <p class="title-s" id="studies"></p>
                   <div class="study-item">
-                      <span class="study-title">Ingeniería de Computación</span>
-                      <span class="study-period">Universidad José Antonio Páez (2016 - 2020)</span>
+                      <span class="study-title" id="career"></span>
+                      <span class="study-period" id="university"></span>
                   </div>
                   <div class="study-item">
-                      <span class="study-title">Maestría en Gestión de Ingeniería Web</span>
-                      <span class="study-period">TECH Technological University (2023 - 2024)</span>
+                      <span class="study-title" id="master"></span>
+                      <span class="study-period">TECH Global University (2023 - 2024)</span>
                   </div>
                   <div class="study-item">
-                    <a href="https://cert.efset.org/Shhsv2" target="_blank" class="study-link">
-                      <span class="study-title">Intermediate English Certification</span>
-                      <span class="study-period">EF English (2024)</span>
+                    <a href="https://cert.efset.org/es/Shhsv2" target="_blank" class="study-link">
+                      <span class="study-title">English B2 Certification</span>
+                      <span class="study-period">EF SET (2024)</span>
                   </a>
                   </div>
               </div>
@@ -159,27 +163,11 @@
               <div class="col-md-6">
                 <div class="about-me pt-4 pt-md-0">
                   <div class="title-box-2">
-                    <h5 class="title-left">
-                      Sobre mí
-                    </h5>
+                    <h5 class="title-left" id="aboutTitle"></h5>
                   </div>
-                  <p style="text-align: justify" class="lead">
-                    Soy Ingeniero de Computación egresado en la Universidad José Antonio Páez, 
-                    ubicado en el municipio San Diego del Estado Carabobo, es un poco difícil hablar de uno
-                    mismo, pero aquí tratare de darles algunas características de mi perfil profesional.
-                  </p>
-                  <p style="text-align: justify" class="lead">
-                    Tengo 4 años de experiencia en el campo de desarrollo de Software, he trabajado
-                    en algunas empresas como las que son App Tecnología, Navegantes del Magallanes BBC, Tigres
-                    de Aragua BBC y Trotamundos de Carabobo todos estos anteriores como pasante y ya como Software Engineer en InteliX Synergy, Alena Designn, MD Digital Solutions, Epidata 
-                    y CompassDigital SL, utilizando tecnologías como Spring Boot, Quarkus, Angular, Docker, Golang, TypeScript, JavaScript, Postman, Oracle, PostgreSQL entre otras. 
-                  </p>
-                  <p style="text-align: justify" class="lead">
-                    Soy estudioso y dedicado en la tecnología, siempre estoy en constante actualización
-                    debido a que todos los días siempre hay algo nuevo que aprender, además de ser una persona
-                    proactiva y creativa, siempre logro mantener la mejor relación con mis clientes captando 
-                    todos sus requerimientos y haciendolo realidad. 
-                  </p>
+                  <p style="text-align: justify" class="lead" id="firstText"></p>
+                  <p style="text-align: justify" class="lead" id="secondText"></p>
+                  <p style="text-align: justify" class="lead" id="thirdText"></p>
                 </div>
               </div>
             </div>
@@ -195,12 +183,8 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="title-box text-center">
-            <h3 class="title-a">
-              Servicios
-            </h3>
-            <p class="subtitle-a">
-              Mis especialidades
-            </p>
+            <h3 class="title-a" id="serviceSection"></h3>
+            <p class="subtitle-a" id="specialties"></p>
             <div class="line-mf"></div>
           </div>
         </div>
@@ -212,11 +196,8 @@
               <span class="ico-circle"><i class="ion-monitor"></i></span>
             </div>
             <div class="service-content">
-              <h2 class="s-title">Desarrollo Frontend</h2>
-              <p class="s-description text-center">
-                Desarrollo de la planificación, diseño, implementación y mantenimiento de sitios web,
-                requeridos por el cliente para encontrar el éxito en sus páginas. 
-              </p>
+              <h2 class="s-title" id="frontend"></h2>
+              <p class="s-description text-center" id="frontendText"></p>
             </div>
           </div>
         </div>
@@ -226,10 +207,8 @@
               <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
             </div>
             <div class="service-content">
-              <h2 class="s-title">Programación Web</h2>
-              <p class="s-description text-center">
-                Desarrollo y creación de páginas y aplicaciones web utilizando tecnologías fundamentales o CMS.
-              </p>
+              <h2 class="s-title" id="web"></h2>
+              <p class="s-description text-center" id="webText"></p>
             </div>
           </div>
         </div>
@@ -239,11 +218,8 @@
               <span class="ico-circle"><i class="ion-code-working"></i></span>
             </div>
             <div class="service-content">
-              <h2 class="s-title">Desarrollo Backend</h2>
-              <p class="s-description text-center">
-                Llevar a cabo la construcción programática del sitio web, como su constante desarrollo 
-                para así lograr los requerimientos propuestos por el cliente y su agrado.
-              </p>
+              <h2 class="s-title" id="backend"></h2>
+              <p class="s-description text-center" id="backendText"></p>
             </div>
           </div>
         </div>
@@ -264,8 +240,8 @@
             </div>
 
             <div class="counter-num">
-              <p class="counter">20</p>
-              <span class="counter-text">Proyectos realizados</span>
+              <p class="counter">25</p>
+              <span class="counter-text" id="projects"></span>
             </div>
           </div>
         </div>
@@ -276,7 +252,7 @@
             </div>
             <div class="counter-num">
               <p class="counter">4</p>
-              <span class="counter-text">Años de experiencia</span>
+              <span class="counter-text" id="experience"></span>
             </div>
           </div>
         </div>
@@ -286,8 +262,8 @@
               <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
             </div>
             <div class="counter-num">
-              <p class="counter">7</p>
-              <span class="counter-text">Cursos realizados</span>
+              <p class="counter" id="certifications">11</p>
+              <span class="counter-text"></span>
             </div>
           </div>
         </div>
@@ -301,12 +277,8 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="title-box text-center">
-            <h3 class="title-a">
-              Trabajos Personales
-            </h3>
-            <p class="subtitle-a">
-              Software y proyectos que he realizado.
-            </p>
+            <h3 class="title-a" id="personalWorks"></h3>
+            <p class="subtitle-a" id="projectsDone"></p>
             <div class="line-mf"></div>
           </div>
         </div>
@@ -323,7 +295,7 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">App Tecnología</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Programador Web</span> / <span class="w-date">18 Jul. 2019</span>
+                      <span class="w-ctegory" id="rolProgrammer1"></span> / <span class="w-date">18 Jul. 2019</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -347,7 +319,7 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">Prensa Magallanes BBC</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Programador Web</span> / <span class="w-date">14 Dic. 2019</span>
+                      <span class="w-ctegory" id="rolProgrammer2"></span> / <span class="w-date">14 Dic. 2019</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -371,7 +343,7 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">VCV Automocion</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Programador Web</span> / <span class="w-date">21 Feb. 2020</span>
+                      <span class="w-ctegory" id="rolProgrammer3"></span> / <span class="w-date">21 Feb. 2020</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -395,7 +367,7 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">RopidWorks</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Programador & CEO</span> / <span class="w-date">20 Nov. 2020</span>
+                      <span class="w-ctegory" id="ceo"></span> / <span class="w-date">20 Nov. 2020</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -419,7 +391,7 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">Imperial Grup</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Programador Web</span> / <span class="w-date">20 Feb. 2021</span>
+                      <span class="w-ctegory" id="rolProgrammer4"></span> / <span class="w-date">20 Feb. 2021</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -443,7 +415,7 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">DepilArte Software</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Desarrollador FullStack</span> / <span class="w-date">25 Sep. 2021</span>
+                      <span class="w-ctegory" id="fullStack"></span> / <span class="w-date">25 Sep. 2021</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -467,7 +439,7 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">Sirius Power Generator</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Programador Web</span> / <span class="w-date">20 Abr. 2023</span>
+                      <span class="w-ctegory" id="rolProgrammer5"></span> / <span class="w-date">20 Abr. 2023</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -496,9 +468,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="title-box-2">
-                    <h5 class="title-left">
-                      Enviame un mensaje
-                    </h5>
+                    <h5 class="title-left" id="sendMessageText"></h5>
                   </div>
                   <div>
                       <form action="https://formspree.io/f/mleowwqb" method="POST" role="form" class="contactForm">
@@ -538,15 +508,10 @@
                 </div>
                 <div class="col-md-6">
                   <div class="title-box-2 pt-4 pt-md-0">
-                    <h5 class="title-left">
-                      Ponerse en contacto
-                    </h5>
+                    <h5 class="title-left" id="contactText"></h5>
                   </div>
                   <div class="more-info">
-                    <p style="text-align: justify" class="lead">
-                    Si desea comunicarse o comentar algo sobre mí, llene los datos del formulario de mensaje para así 
-                    obtener una próxima respuesta para futuras planificaciones de proyectos o trabajos.
-                    </p>
+                    <p style="text-align: justify" class="lead" id="contactP"></p>
                     <ul class="list-ico">
                       <li><span class="ion-ios-location"></span>Venezuela</li>
                       <li><span class="ion-email"></span>juanpablozabala21@gmail.com</li>
@@ -570,7 +535,7 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="copyright-box">
-              <p class="copyright">&copy; Copyright <strong>Juan Zabala Developer</strong>. Todos los derechos reservados.</p>
+              <p class="copyright" id="copyright">&copy; Copyright <strong>Juan Zabala Developer</strong>. Todos los derechos reservados.</p>
               <div class="credits">
                 <!--
                   All the links in the footer should remain intact.
