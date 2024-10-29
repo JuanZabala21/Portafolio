@@ -197,7 +197,7 @@ function changeLanguage(lang) {
 // Detecta el idioma actual y actualiza el texto
 function updateLanguageText() {
     const languageText = document.getElementById('languageText');
-    const currentLanguage = localStorage.getItem('language') || 'en';
+    const currentLanguage = localStorage.getItem('language') || 'es';
     languageText.textContent = currentLanguage === 'en' ? 'ENG' : 'ESP';
 }
 
