@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title id="title">Juan P. Zabala Developer</title>
+  <title>Juan P. Zabala Developer</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -32,12 +32,10 @@
 </head>
 
 <body id="page-top">
-
-
   <!--/ Nav Star /-->
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top" id="portfolio">Portafolio</a>
+      <a class="navbar-brand js-scroll" href="#page-top" id="portfolio"></a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
         aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
@@ -52,14 +50,10 @@
           <li class="nav-item"><a class="nav-link js-scroll" id="workNav"  href="#work"></a></li>
           <li class="nav-item"><a class="nav-link js-scroll" id="contactNav" href="#contact"></a></li>
           <li class="nav-item">
-            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Idioma
+            <a class="nav-link" href="#" id="languageSwitcher" onclick="toggleLanguage()">
+                <span id="languageText">ENG</span>
             </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" id="languageSwitcher">
-                <a class="dropdown-item" href="#" onclick="changeLanguage('es')">ESP</a>
-                <a class="dropdown-item" href="#" onclick="changeLanguage('en')">ENG</a>
-            </div>
-        </li>
+          </li>
         </ul>
       </div>
     </div>
@@ -74,7 +68,7 @@
       <div class="table-cell">
         <div class="container">
           <h1 class="intro-title mb-4" id="introTitle">Juan Pablo Zabala</h1>
-          <p class="intro-subtitle" id="introSubtitle"><span class="text-slider-items">Software Engineer, FullStack Developer, Frontend Engineer</span><strong class="text-slider"></strong></p>
+          <p class="intro-subtitle" ><span class="text-slider-items">Software Engineer, Full Stack Developer, Frontend Engineer</span><strong class="text-slider"></strong></p>
         </div>
       </div>
     </div>
@@ -262,8 +256,8 @@
               <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
             </div>
             <div class="counter-num">
-              <p class="counter" id="certifications">11</p>
-              <span class="counter-text"></span>
+              <p class="counter">11</p>
+              <span class="counter-text" id="certifications"></span>
             </div>
           </div>
         </div>

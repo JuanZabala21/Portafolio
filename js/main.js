@@ -116,109 +116,6 @@
 
 })(jQuery);
 
-var languageContent = {
-    es: {
-		portfolio: "Portafolio",
-        title: "Juan P. Zabala Developer",
-        introTitle: "Juan Pablo Zabala",
-        introSubtitle: "Software Engineer, FullStack Developer, Frontend Engineer",
-		homeTitle: "Inicio",
-        aboutTitle: "Sobre mí",
-        servicesTitle: "Servicios",
-        workTitle: "Trabajos",
-        contactTitle: "Contáctame",
-		languageTitle: "Idioma",
-		nameTitle: "Nombre",
-		profileTitle: "Perfil",
-		skillsTitle: "Habilidades",
-		seeTitle:"Ver",
-		database: "Base de Datos",
-		studiesTitle: "Estudios",
-		careerTitle: "Ingeniería de Computación",
-		universityTitle: "Universidad José Antonio Páez (2016 - 2020)",
-		masterTitle: "Maestría en Gestión de Ingeniería de Sitios Web",
-		firstText: "Soy Ingeniero de Computación egresado en la Universidad José Antonio Páez, ubicado en el municipio San Diego del Estado Carabobo, es un poco difícil hablar de unomismo, pero aquí tratare de darles algunas características de mi perfil profesional.",
-        secondText: "Tengo 4 años de experiencia en el campo de desarrollo de Software, he trabajado en algunas empresas como las que son App Tecnología, Navegantes del Magallanes BBC, Tigres de Aragua BBC y Trotamundos de Carabobo todos estos anteriores como pasante y ya como Software Engineer en InteliX Synergy, Alena Designn, MD Digital Solutions, Epidata y CompassDigital SL, utilizando tecnologías como Spring Boot, Quarkus, Angular, React, VueJS Docker, Golang, TypeScript, JavaScript, Postman, Oracle, PostgreSQL entre otras.",
-		thirdText: "Soy estudioso y dedicado en la tecnología, siempre estoy en constante actualización debido a que todos los días siempre hay algo nuevo que aprender, además de ser una persona proactiva y creativa, siempre logro mantener la mejor relación con mis clientes captando todos sus requerimientos y haciendolo realidad.",
-		serviceSection: "Servicios",
-		specialties: "Mis especialidades",
-		frontend: "Desarrollo Frontend",
-		frontendText: "Desarrollo de la planificación, diseño, implementación y mantenimiento de sitios web, requeridos por el cliente para encontrar el éxito en sus páginas.",
-		web: "Programación Web",
-		webText: "Desarrollo y creación de páginas y aplicaciones web utilizando tecnologías fundamentales o CMS.",
-		backend: "Desarrollo Backend",
-		backendText: "Llevar a cabo la construcción programática del sitio web, como su constante desarrollo para así lograr los requerimientos propuestos por el cliente y su agrado.",
-		projects: "Proyectos realizados",
-		experience: "Años de Experiencia",
-		certifications: "Certificaciones realizadas",
-		personalWorks: "Trabajos Personales",
-		projectsDone: "Software y proyectos que he realizado.",
-		rolProgrammer: "Programador Web",
-		ceo: "Programador & CEO",
-		fullStack: "Desarrollador FullStack",
-		sendMessage: "¡Tu mensaje ha sido enviado!. ¡Gracias!",
-		sendMessageText: "Enviame un mensaje",
-		contactText: "Ponerse en contacto",
-		contactP: "Si desea comunicarse o comentar algo sobre mí, llene los datos del formulario de mensaje para así obtener una próxima respuesta para futuras planificaciones de proyectos o trabajos.",
-		name: "Nombre",
-        email: "Correo",
-        subject: "Asunto",
-        message: "Mensaje",
-        send: "Enviar",
-		copyright: "Copyright Desarrollador Juan P. Zabala Todos los derechos reservados."
-	},
-    en: {
-		portfolio: "Portfolio",
-        title: "Juan P. Zabala Developer",
-        introTitle: "Juan Pablo Zabala",
-        introSubtitle: "Software Engineer, FullStack Developer",
-		homeTitle: "Home",
-        aboutTitle: "About Me",
-        servicesTitle: "Services",
-        workTitle: "Works",
-        contactTitle: "Contact Me",
-		languageTitle: "Language",
-		nameTitle: "Name",
-		profileTitle: "Profile",
-		skillsTitle: "Skills",
-		seeTitle: "See",
-		database: "Databases",
-		studiesTitle: "Studies",
-		careerTitle: "Computer Engineer",
-		universityTitle: "José Antonio Páez University (2016 - 2020)",
-		masterTitle: "Web Site Management Engineering",
-		firstText: "I am a Computer Engineer graduated from the University Jose Antonio Paez, located in the municipality of San Diego, Carabobo State, it is a little difficult to talk about myself, but here I will try to give you some characteristics of my professional profile.",
-		secondText: "I have 4 years of experience in the field of software development, I have worked in some companies such as App Tecnología, Navegantes del Magallanes BBC, Tigres de Aragua BBC and Trotamundos de Carabobo all these previous as an intern and already as Software Engineer in InteliX Synergy, Alena Designn, MD Digital Solutions, Epidata and CompassDigital SL, using technologies such as Spring Boot, Quarkus, Angular, React, VueJS Docker, Golang, TypeScript, JavaScript, Postman, Oracle, PostgreSQL among others.",
-		thirdText: "I am studious and dedicated in technology, I am always in constant updating because every day there is always something new to learn, besides being a proactive and creative person, I always manage to maintain the best relationship with my clients capturing all their requirements and making it a reality."	,
-		serviceSection: "Services",
-		specialties: "My specialties",
-		frontend: "Frontend Development",
-		frontendText: "Development of planning, design, implementation and maintenance of web sites, required by the client to find success in their pages.",
-		web: "Web Programming",
-		webText: "Development and creation of web pages and web applications using core technologies or CMS.",
-		backend: "Backend Development",
-		backendText: "Carry out the programmatic construction of the website, as well as its constant development in order to achieve the requirements proposed by the client and their satisfaction.",
-		projects: "Completed projects",
-		experience: "Years of experience",
-		certifications: "Certifications Completed",
-		personalWorks: "Personal Works",
-		projectsDone: "Software and projects I have done.",
-		rolProgrammer: "Web Programmer",
-		ceo: "Programmer & CEO",
-		fullStack: "FullStack Developer",
-		sendMessage: "Your message has been sent, thanks!",
-		sendMessageText: "Send me a message",
-		contactText: "Contact Us",
-		contactP: "If you wish to communicate or comment something about me, please fill in the message form to get a next answer for future project or work planning. get a next response for future project or work planning.",
-		name: "Name",
-        email: "Email",
-        subject: "Subject",
-        message: "Message",
-        send: "Send",
-		copyright: "Copyright Juan P. Zabala Developer All rights reserved."
-	}
-};
-
 var currentLanguage = localStorage.getItem('selectedLanguage') || 'es'; // Idioma por defecto
 
 function updateCVLink() {
@@ -233,69 +130,88 @@ function updateCVLink() {
 window.onload = updateCVLink;
 
 function changeLanguage(lang) {
-    currentLanguage = lang;
-	updateCVLink();
-    localStorage.setItem('selectedLanguage', lang); // Guarda el idioma en el almacenamiento local
+	fetch(`./lang/${lang}.json`)
+        .then(response => response.json())
+        .then(languageContent => {
+			currentLanguage = lang;
+			updateCVLink();
+			localStorage.setItem('selectedLanguage', lang); // Guarda el idioma en el almacenamiento local
+		
+			// Cambia el contenido según el idioma seleccionado
+			document.getElementById('portfolio').innerText = languageContent.portfolio;
+			document.getElementById('introTitle').innerText = languageContent.introTitle;
+			document.getElementById('homeNav').innerText = languageContent.homeTitle;
+			document.getElementById('aboutNav').innerText = languageContent.aboutTitle;
+			document.getElementById('aboutTitle').innerText = languageContent.aboutTitle;
+			document.getElementById('serviceNav').innerText = languageContent.servicesTitle;
+			document.getElementById('workNav').innerText = languageContent.workTitle;
+			document.getElementById('contactNav').innerText = languageContent.contactTitle;
+			document.getElementById('nameTitle').innerText = languageContent.nameTitle;
+			document.getElementById('profile').innerText = languageContent.profileTitle;
+			document.getElementById('see').innerText = languageContent.seeTitle;
+			document.getElementById('database').innerText = languageContent.database;
+			document.getElementById('skills').innerText = languageContent.skillsTitle;
+			document.getElementById('studies').innerText = languageContent.studiesTitle;
+			document.getElementById('career').innerText = languageContent.careerTitle;
+			document.getElementById('university').innerText = languageContent.universityTitle;
+			document.getElementById('master').innerText = languageContent.masterTitle;
+			document.getElementById('firstText').innerText = languageContent.firstText;
+			document.getElementById('secondText').innerText = languageContent.secondText;
+			document.getElementById('thirdText').innerText = languageContent.thirdText;
+			document.getElementById('serviceSection').innerText = languageContent.serviceSection;
+			document.getElementById('specialties').innerText = languageContent.specialties;
+			document.getElementById('frontend').innerText = languageContent.frontend;
+			document.getElementById('frontendText').innerText = languageContent.frontendText;
+			document.getElementById('web').innerText = languageContent.web;
+			document.getElementById('webText').innerText = languageContent.webText;
+			document.getElementById('backend').innerText = languageContent.backend;
+			document.getElementById('backendText').innerText = languageContent.backendText;
+			document.getElementById('projects').innerText = languageContent.projects;
+			document.getElementById('experience').innerText = languageContent.experience;
+			document.getElementById('certifications').innerText = languageContent.certifications;
+			document.getElementById('personalWorks').innerText = languageContent.personalWorks;
+			document.getElementById('projectsDone').innerText = languageContent.projectsDone;
+			document.getElementById('rolProgrammer1').innerText = languageContent.rolProgrammer;
+			document.getElementById('rolProgrammer2').innerText = languageContent.rolProgrammer;
+			document.getElementById('rolProgrammer3').innerText = languageContent.rolProgrammer;
+			document.getElementById('rolProgrammer4').innerText = languageContent.rolProgrammer;
+			document.getElementById('rolProgrammer5').innerText = languageContent.rolProgrammer;
+			document.getElementById('ceo').innerText = languageContent.ceo;
+			document.getElementById('fullStack').innerText = languageContent.fullStack;
+			document.getElementById('sendMessageText').innerText = languageContent.sendMessageText;
+			if(document.getElementById('sendMessage')){
+				document.getElementById('sendMessage').innerText = languageContent.sendMessage;
+			}
+			document.getElementById('contactText').innerText = languageContent.contactText;
+			document.getElementById('contactP').innerText = languageContent.contactP;
+			document.getElementById('name').placeholder = languageContent.name;
+			document.getElementById('email').placeholder = languageContent.email;
+			document.getElementById('subject').placeholder = languageContent.subject;
+			document.getElementById('copyright').innerText = languageContent.copyright;
+		
+			document.querySelector('textarea[name="message"]').placeholder = languageContent.message;
+			document.querySelector('input[type="submit"]').value = languageContent.send;
+			})
+		}
 
-    // Cambia el contenido según el idioma seleccionado
-    document.getElementById('title').innerText = languageContent[lang].title;
-	document.getElementById('portfolio').innerText = languageContent[lang].portfolio;
-    document.getElementById('introTitle').innerText = languageContent[lang].introTitle;
-	document.getElementById('homeNav').innerText = languageContent[lang].homeTitle;
-    document.getElementById('aboutNav').innerText = languageContent[lang].aboutTitle;
-	document.getElementById('aboutTitle').innerText = languageContent[lang].aboutTitle;
-    document.getElementById('serviceNav').innerText = languageContent[lang].servicesTitle;
-    document.getElementById('workNav').innerText = languageContent[lang].workTitle;
-    document.getElementById('contactNav').innerText = languageContent[lang].contactTitle;
-	document.getElementById('languageDropdown').innerText = languageContent[lang].languageTitle;
-	document.getElementById('nameTitle').innerText = languageContent[lang].nameTitle;
-	document.getElementById('profile').innerText = languageContent[lang].profileTitle;
-	document.getElementById('see').innerText = languageContent[lang].seeTitle;
-	document.getElementById('database').innerText = languageContent[lang].database;
-	document.getElementById('skills').innerText = languageContent[lang].skillsTitle;
-	document.getElementById('studies').innerText = languageContent[lang].studiesTitle;
-	document.getElementById('career').innerText = languageContent[lang].careerTitle;
-	document.getElementById('university').innerText = languageContent[lang].universityTitle;
-	document.getElementById('master').innerText = languageContent[lang].masterTitle;
-	document.getElementById('firstText').innerText = languageContent[lang].firstText;
-	document.getElementById('secondText').innerText = languageContent[lang].secondText;
-	document.getElementById('thirdText').innerText = languageContent[lang].thirdText;
-	document.getElementById('serviceSection').innerText = languageContent[lang].serviceSection;
-	document.getElementById('specialties').innerText = languageContent[lang].specialties;
-	document.getElementById('frontend').innerText = languageContent[lang].frontend;
-	document.getElementById('frontendText').innerText = languageContent[lang].frontendText;
-	document.getElementById('web').innerText = languageContent[lang].web;
-	document.getElementById('webText').innerText = languageContent[lang].webText;
-	document.getElementById('backend').innerText = languageContent[lang].backend;
-	document.getElementById('backendText').innerText = languageContent[lang].backendText;
-	document.getElementById('projects').innerText = languageContent[lang].projects;
-	document.getElementById('experience').innerText = languageContent[lang].experience;
-	document.getElementById('certifications').innerText = languageContent[lang].certifications;
-	document.getElementById('personalWorks').innerText = languageContent[lang].personalWorks;
-	document.getElementById('projectsDone').innerText = languageContent[lang].projectsDone;
-	document.getElementById('rolProgrammer1').innerText = languageContent[lang].rolProgrammer;
-	document.getElementById('rolProgrammer2').innerText = languageContent[lang].rolProgrammer;
-	document.getElementById('rolProgrammer3').innerText = languageContent[lang].rolProgrammer;
-	document.getElementById('rolProgrammer4').innerText = languageContent[lang].rolProgrammer;
-	document.getElementById('rolProgrammer5').innerText = languageContent[lang].rolProgrammer;
-	document.getElementById('ceo').innerText = languageContent[lang].ceo;
-	document.getElementById('fullStack').innerText = languageContent[lang].fullStack;
-	document.getElementById('sendMessageText').innerText = languageContent[lang].sendMessageText;
-	if(document.getElementById('sendMessage')){
-		document.getElementById('sendMessage').innerText = languageContent[lang].sendMessage;
-	}
-	document.getElementById('contactText').innerText = languageContent[lang].contactText;
-	document.getElementById('contactP').innerText = languageContent[lang].contactP;
-	document.getElementById('name').placeholder = languageContent[lang].name;
-    document.getElementById('email').placeholder = languageContent[lang].email;
-    document.getElementById('subject').placeholder = languageContent[lang].subject;
-    document.querySelector('textarea[name="message"]').placeholder = languageContent[lang].message;
-    
-    // Actualiza el valor del botón enviar
-    document.querySelector('input[type="submit"]').value = languageContent[lang].send;
-	document.getElementById('copyright').innerText = languageContent[lang].copyright;
-
+// Detecta el idioma actual y actualiza el texto
+function updateLanguageText() {
+    const languageText = document.getElementById('languageText');
+    const currentLanguage = localStorage.getItem('language') || 'en';
+    languageText.textContent = currentLanguage === 'en' ? 'ENG' : 'ESP';
 }
+
+// Cambia el idioma y actualiza la interfaz
+function toggleLanguage() {
+    let currentLanguage = localStorage.getItem('language') || 'en';
+    currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+    localStorage.setItem('language', currentLanguage);
+    changeLanguage(currentLanguage); // Llama a tu función para cambiar el idioma
+    updateLanguageText();
+}
+
+// Llama a la función al cargar la página para mostrar el idioma actual
+document.addEventListener('DOMContentLoaded', updateLanguageText);
 
 // Al cargar la página, establece el idioma según el almacenamiento local
 window.onload = function() {
